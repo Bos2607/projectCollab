@@ -1,3 +1,7 @@
+# Byron
+# Isaac
+
+
 juegos_Terminados=[]
 juegos_en_progreso=[]
 juegos_platinados=[]
@@ -10,6 +14,7 @@ while opcion != 5:
     print("\n====================================")
     print("CONTROL DE VENTAS DE VIDEOJUEGOS")
     print("\n====================================")
+    
      
     print("1.Agregar juego")
     print("2.Ver cantidad de juegos")
@@ -19,6 +24,8 @@ while opcion != 5:
     print("6.salir")
     
     opcion=int(input("ingrese la opcion a la que quiera ingresar: "))
+    
+    print("verificar")
     
 
 
