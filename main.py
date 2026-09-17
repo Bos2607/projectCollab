@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+juegos_Terminados=[]
+juegos_en_progreso=[]
+juegos_platinados=[]
+
+
 opcion= 0
 
 while opcion != 5:
@@ -11,13 +15,10 @@ while opcion != 5:
     print("2.Ver cantidad de juegos")
     print("3.ver precio")
     print("4.eliminar juego")
-    print("5.salir")
+    print("5.Ver todos los juegos")
+    print("6.salir")
     
     opcion=int(input("ingrese la opcion a la que quiera ingresar: "))
     
-=======
-juegos_Terminados=[]
-juegos_en_progreso=[]
-juegos_platinados=[]
 
->>>>>>> e0f7a94c45000dccdd3782dd438fc905c96e7668
+
