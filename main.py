@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 opcion= 0
 
 while opcion != 5:
@@ -14,3 +15,9 @@ while opcion != 5:
     
     opcion=int(input("ingrese la opcion a la que quiera ingresar: "))
     
+=======
+juegos_Terminados=[]
+juegos_en_progreso=[]
+juegos_platinados=[]
+
+>>>>>>> e0f7a94c45000dccdd3782dd438fc905c96e7668
