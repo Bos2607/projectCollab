@@ -52,10 +52,14 @@ def agregar_juego():
             
         elif estado == "platinado":
            juegos_platinados.append(nombre)
-           juegos_Terminados.append(nombre)
         
     print(f"{nombre} agregado exitosamente")
-        
+    
+def cantidad_juegos():
+    
+    suma=len(juegos_en_progreso) + len(juegos_platinados) + len(juegos_Terminados)
+    
+    print(f"Cantidad de juegos actuales: {suma}")
 
 
 opcion= 0
@@ -80,7 +84,8 @@ while opcion != 5:
         agregar_juego()
         
     elif opcion == 2:
-         print(f"la cantidad de juegos son, ")
+        cantidad_juegos()
+         
          
     elif opcion == 3:
         precio=input("ingrese el juego al que quiera ver el precio: ")
