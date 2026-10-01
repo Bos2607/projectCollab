@@ -5,7 +5,7 @@
 juegos_Terminados=[]
 juegos_en_progreso=[]
 juegos_platinados=[]
-
+total_juegos=[]
 
 
 
@@ -78,6 +78,53 @@ while opcion != 5:
     
     if opcion == 1:
         agregar_juego()
+        
+    elif opcion == 2:
+         print(f"la cantidad de juegos son, ")
+         
+    elif opcion == 3:
+        precio=input("ingrese el juego al que quiera ver el precio: ")
+        
+        if precio not in total_juegos:
+            print("el juego no esta en la lista")
+        
+            
+            
+            
+    elif opcion == 4:
+         for i in range(len(total_juegos)):
+            print(total_juegos)
+                                        
+         eliminar_juego= float(input("ingrese el juego que quiera eliminar"))
+        
+         if eliminar_juego in total_juegos:
+            total_juegos.remove(eliminar_juego)
+         else:
+            print("nota no registrada")
+            
+         for i in range(len(total_juegos)):
+            print(total_juegos)
+            
+    # elif opcion == 5:
+        
+        
+        
+    elif opcion == 6:
+        print("haz salido del sistema")
+        break
+    
+        
+        
+            
+        
+         
+   
+        
+        
+    
+    
+   
+        
 
         
         
