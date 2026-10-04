@@ -47,15 +47,15 @@ def agregar_juego():
         if estado == "terminado":
 
 
-            juegos_Terminados.append(nombre)
+            juegos_Terminados.append((nombre,plataforma,estado,genero,precio))
             total_juegos.append(juegos_Terminados)
                 
         elif estado == "progreso":
-           juegos_en_progreso.append(nombre)
+           juegos_en_progreso.append((nombre,plataforma,estado,genero,precio))
            total_juegos.append(juegos_en_progreso)
         
         elif estado == "platinado":
-           juegos_platinados.append(nombre)
+           juegos_platinados.append((nombre,plataforma,estado,genero,precio))
            total_juegos.append(juegos_platinados)
 
            
