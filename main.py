@@ -45,27 +45,13 @@ def agregar_juego():
         
     
         if estado == "terminado":
-
-            juegos_Terminados.append(nombre)
-            total_juegos.append(juegos_Terminados)
-                
-        elif estado == "progreso":
-           juegos_en_progreso.append(nombre)
-           total_juegos.append(juegos_en_progreso)
-        
-        elif estado == "platinado":
-           juegos_platinados.append(nombre)
-           total_juegos.append(juegos_platinados)
-
-           juegos_Terminados.append((nombre,plataforma,estado,genero,precio))
-            
+            juegos_Terminados.append((nombre,plataforma,estado,genero,precio))
                 
         elif estado == "progreso":
            juegos_en_progreso.append((nombre,plataforma,estado,genero,precio))
             
         elif estado == "platinado":
            juegos_platinados.append((nombre,plataforma,estado,genero,precio))
-
         
     print(f"{nombre} agregado exitosamente")
     
@@ -75,6 +61,8 @@ def cantidad_juegos():
     
     print(f"Cantidad de juegos actuales: {suma}")
 
+def ver_precios():
+    pass
 
 opcion= 0
 
@@ -102,13 +90,7 @@ while opcion != 5:
          
          
     elif opcion == 3:
-      for i in juegos_en_progreso:
-          print(i[0][1])
-      for j in juegos_platinados:
-        print(j[0][1])
-      for k in juegos_Terminados:
-        print(k[0][1])
-            
+        pass
             
             
     elif opcion == 4:
@@ -125,14 +107,8 @@ while opcion != 5:
          for i in range(len(total_juegos)):
             print(total_juegos)
             
-    # elif opcion == 5:
-
-    #     if not total_juegos:
-    #         print("no hay juegos en venta")
-    #     else:
-            
-        
-
+    elif opcion == 5:
+        pass
         
         
     elif opcion == 6:
