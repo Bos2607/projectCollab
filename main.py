@@ -46,12 +46,15 @@ def agregar_juego():
     
         if estado == "terminado":
             juegos_Terminados.append(nombre)
+            total_juegos.append(juegos_Terminados)
                 
         elif estado == "progreso":
            juegos_en_progreso.append(nombre)
-            
+           total_juegos.append(juegos_en_progreso)
+        
         elif estado == "platinado":
            juegos_platinados.append(nombre)
+           total_juegos.append(juegos_platinados)
         
     print(f"{nombre} agregado exitosamente")
     
@@ -110,7 +113,11 @@ while opcion != 5:
          for i in range(len(total_juegos)):
             print(total_juegos)
             
-    # elif opcion == 5:
+    elif opcion == 5:
+        if not total_juegos:
+            print("no hay juegos en venta")
+        else:
+            
         
         
         
