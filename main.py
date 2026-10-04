@@ -42,26 +42,23 @@ def agregar_juego():
           except ValueError:
               print("Ingrese solo numeros")
               continue
-        
-    
+            
+        juego = (nombre,plataforma,estado,genero,precio)
         if estado == "terminado":
 
 
-            juegos_Terminados.append((nombre,plataforma,estado,genero,precio))
-            total_juegos.append(juegos_Terminados)
+            juegos_Terminados.append(juego)
+            total_juegos.append(juego)
                 
         elif estado == "progreso":
-           juegos_en_progreso.append((nombre,plataforma,estado,genero,precio))
-           total_juegos.append(juegos_en_progreso)
+           juegos_en_progreso.append(juego)
+           total_juegos.append(juego)
         
         elif estado == "platinado":
-           juegos_platinados.append((nombre,plataforma,estado,genero,precio))
-           total_juegos.append(juegos_platinados)
-
-           
+           juegos_platinados.append(juego)
+           total_juegos.append(juego)
 
         
-
     print(f"{nombre} agregado exitosamente")
     
 def cantidad_juegos():
@@ -103,18 +100,18 @@ while opcion != 5:
             
             
     elif opcion == 4:
-         for i in range(len(total_juegos)):
-            print(total_juegos)
+         for juego in total_juegos:
+            print(juego[0])
                                         
-         eliminar_juego= float(input("ingrese el juego que quiera eliminar"))
+         eliminar_juego=input("ingrese el juego que quiera eliminar: ")
         
          if eliminar_juego in total_juegos:
             total_juegos.remove(eliminar_juego)
          else:
-            print("nota no registrada")
+            print("Juego no registrado")
             
-         for i in range(len(total_juegos)):
-            print(total_juegos)
+         for i in total_juegos:
+            print("\t",i)
             
 
     # elif opcion == 5:
@@ -123,12 +120,6 @@ while opcion != 5:
     #         print("no hay juegos en venta")
     #     else:
     #         print
-            
-        
-
-
-    elif opcion == 5:
-        pass
 
         
         
