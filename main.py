@@ -45,6 +45,7 @@ def agregar_juego():
         
     
         if estado == "terminado":
+
             juegos_Terminados.append(nombre)
             total_juegos.append(juegos_Terminados)
                 
@@ -55,6 +56,16 @@ def agregar_juego():
         elif estado == "platinado":
            juegos_platinados.append(nombre)
            total_juegos.append(juegos_platinados)
+
+           juegos_Terminados.append((nombre,plataforma,estado,genero,precio))
+            
+                
+        elif estado == "progreso":
+           juegos_en_progreso.append((nombre,plataforma,estado,genero,precio))
+            
+        elif estado == "platinado":
+           juegos_platinados.append((nombre,plataforma,estado,genero,precio))
+
         
     print(f"{nombre} agregado exitosamente")
     
@@ -76,7 +87,7 @@ while opcion != 5:
      
     print("1.Agregar juego")
     print("2.Ver cantidad de juegos")
-    print("3.ver precio")
+    print("3.ver precios de juegos")
     print("4.eliminar juego")
     print("5.Ver todos los juegos")
     print("6.salir")
@@ -91,11 +102,12 @@ while opcion != 5:
          
          
     elif opcion == 3:
-        precio=input("ingrese el juego al que quiera ver el precio: ")
-        
-        if precio not in total_juegos:
-            print("el juego no esta en la lista")
-        
+      for i in juegos_en_progreso:
+          print(i[0][1])
+      for j in juegos_platinados:
+        print(j[0][1])
+      for k in juegos_Terminados:
+        print(k[0][1])
             
             
             
@@ -113,19 +125,21 @@ while opcion != 5:
          for i in range(len(total_juegos)):
             print(total_juegos)
             
-    elif opcion == 5:
-        if not total_juegos:
-            print("no hay juegos en venta")
-        else:
+    # elif opcion == 5:
+
+    #     if not total_juegos:
+    #         print("no hay juegos en venta")
+    #     else:
             
         
+
         
         
     elif opcion == 6:
         print("haz salido del sistema")
         break
     
-        
+    
         
             
         
@@ -141,4 +155,3 @@ while opcion != 5:
         
         
        
-
